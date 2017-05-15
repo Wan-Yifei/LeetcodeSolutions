@@ -1,5 +1,5 @@
 # Solution
-## 1. Recursion
+## a. Recursion
 ```java
 start:
 new stack
