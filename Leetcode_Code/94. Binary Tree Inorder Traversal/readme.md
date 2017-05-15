@@ -6,6 +6,7 @@ new stack
 dfs(Treehead)
   if left tree is not null
     dfs(left tree head)
+    
  /*inorder traverse part*/ 
   Add head value to the stack
     
