@@ -27,7 +27,7 @@ public:
                 vector<TreeNode *> rightTree = generateTrees(i - j - 1);
                 for (int k = 0; k < leftTree.size(); ++k) {
                     for (int l = 0; l < rightTree.size(); ++l) {
-                        TreeNode *root = new TreeNode(j);
+                        TreeNode *root = new TreeNode(i);
                         root->left = leftTree[k];
                         root->right = rightTree[l];
                         result.push_back(root);
