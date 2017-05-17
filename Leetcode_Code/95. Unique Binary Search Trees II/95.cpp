@@ -23,13 +23,11 @@ private:
             return result;
         }
         for (int i = start; i <= end; ++i) {
-            vector<TreeNode *> subL = generateSubTree(start, i - 1);
-            vector<TreeNode *> subR = generateSubTree(i + 1, end);
-            for (int l = 0; l < subL.size(); ++l) {
-                for (int r = 0; r < subR.size(); ++r) {
+            for (TreeNode *subL: generateSubTree(start, i - 1)) {
+                for (TreeNode *subR:generateSubTree(i + 1, end)) {
                     TreeNode *head = new TreeNode(i);
-                    head->left = subL[l];
-                    head->right = subR[r];
+                    head->left = subL;
+                    head->right = subR;
                     result.push_back(head);
                 }
             }
