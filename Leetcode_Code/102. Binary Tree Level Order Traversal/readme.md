@@ -37,3 +37,28 @@ TYPE Function(TreeNode *root) {
     return;
 }
 ```
+### java model
+```java
+public TYPE Function(TreeNode root) {
+    if (root == null) return;
+    Queue<TreeNode> Q = new LinkedList<>();
+    Q.add(root);
+    /*start bfs*/
+    while (!Q.isEmpty()) {
+        int size = Q.size();
+        for (int i = 0; i < size; ++i) {
+            TreeNode head = Q.poll();
+            /**do operation for each element for this level*/
+            
+            /*Loop through tree branches from this node*/
+            if (head.left != null) Q.add(head.left);
+            if (head.right != null) Q.add(head.right);
+        }
+        
+        /**Do operation for each level*/
+        
+    }
+    /**return some result*/
+    return result;
+}
+```
