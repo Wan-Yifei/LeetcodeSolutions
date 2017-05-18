@@ -6,3 +6,4 @@ Another Example: [0, **2**, **1**, 3], this wrong drop happen at 1, then the fir
 * Last node's value is greater than this node (compare happens in the second node traversal)
 * The wrong number drop happens, the wrong node happens at previous node, the second wrong number candidate will target at this point
 * If another second wrong node happens, then target root as second wrong node
+* Finally swap the wrong node values
