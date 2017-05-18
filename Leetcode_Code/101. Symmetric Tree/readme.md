@@ -1,5 +1,5 @@
 # Solution
 ## Steps:
 * if root node is null, then return true
-* then, check the left sub-tree is reflected equals to the right sub-tree
+* then, check the left sub-tree is reflected equals to the right sub-tree<br>
 It is similar to leetcode 100.
