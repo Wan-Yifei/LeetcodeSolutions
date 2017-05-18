@@ -6,7 +6,7 @@ which is if the size of array minus 1 is less than layer numbers, we will prepar
 ## BFS
 ### c++ model
 ``` cpp
-TYPE XXX(TreeNode *root) {
+TYPE Function(TreeNode *root) {
     /*exception handling*/
     if (!root) return;
     /*build a queue*/
