@@ -5,7 +5,7 @@ Watch that the 2d array will not be initialled, we will prepare a place where th
 which is if the size of array minus 1 is less than layer numbers, we will prepare the 1d array inside the 2d array.
 ## BFS
 Model:
-'''c++
+'''cpp
 TYPE XXX(TreeNode *root) {
     /*exception handling*/
     if (!root) return;
