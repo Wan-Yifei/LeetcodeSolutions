@@ -48,6 +48,7 @@ public TYPE Function(TreeNode root) {
         int size = Q.size();
         for (int i = 0; i < size; ++i) {
             TreeNode head = Q.poll();
+            
             /**do operation for each element for this level*/
             
             /*Loop through tree branches from this node*/
