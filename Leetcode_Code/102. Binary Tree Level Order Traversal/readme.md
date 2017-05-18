@@ -22,12 +22,16 @@ TYPE XXX(TreeNode *root) {
             /*Get each element and pop from the queue*/
             TreeNode *head = Q.front();
             Q.pop();
-            /**do operation for each element*/
+            
+            /**do operation for each element for this level*/
+            
             /*Loop through tree branches from this node*/
             if (head->left) Q.push(head->left);
             if (head->right) Q.push(head->right);
         };
+        
         /**Do operation for each level*/
+        
     }
     /**return some result*/
     return;
