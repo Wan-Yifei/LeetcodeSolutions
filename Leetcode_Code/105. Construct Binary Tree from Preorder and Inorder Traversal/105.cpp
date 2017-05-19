@@ -17,17 +17,15 @@ public:
 private:
     int Find(vector<int> &v, int start, int end, int value) {
         int i = start;
-        for (; i <= end; ++i) {
-            if (v[i] == value)
-                break;
-        }
+        while (v[i] != value && i < end) i++;
         return i;
     }
 
     /*global counter for pre-order traversal array*/
     int Pnow = 0;
 
-    TreeNode *buildTree_dfs(vector<int> &preorder, vector<int> &inorder, int Istart, int Iend) {
+    TreeNode *buildTree_dfs(vector<int> &preorder, vector<int> &inorder,
+                            int Istart, int Iend) {
         if (Istart > Iend || Pnow >= preorder.size()) return NULL;
         TreeNode *root = new TreeNode(preorder[Pnow]);
         /*int mid = find(inorder.begin() + Istart, inorder.begin() + Iend, preorder[Pnow]);*/
