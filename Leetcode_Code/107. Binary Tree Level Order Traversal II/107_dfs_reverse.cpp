@@ -1,21 +1,31 @@
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
 class Solution {
 public:
     vector<vector<int>> levelOrderBottom(TreeNode *root) {
-        if (root) {
-            levelOrderBottom_dfs(root, 0);
-            reverse(result.begin(), result.end());
+        vector<vector<int>> result;
+        if (!root) return result;
+        queue<TreeNode *> Q;
+        Q.push(root);
+        while (!Q.empty()) {
+            int size = (int) Q.size();
+            vector<int> layerElement;
+            for (int i = 0; i < size; ++i) {
+                TreeNode *head = Q.front();
+                Q.pop();
+                layerElement.push_back(head->val);
+                if (head->left) Q.push(head->left);
+                if (head->right) Q.push(head->right);
+            }
+            result.insert(result.begin(), layerElement);
         }
         return result;
-    }
-
-private:
-    vector<vector<int>> result;
-
-    void levelOrderBottom_dfs(TreeNode *root, int layer) {
-        if (!root) return;
-        if (result.size() <= layer) result.push_back(vector<int>());
-        result[layer].push_back(root->val);
-        levelOrderBottom_dfs(root->left, layer + 1);
-        levelOrderBottom_dfs(root->right, layer + 1);
     }
 };
