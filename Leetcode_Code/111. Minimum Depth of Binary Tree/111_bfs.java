@@ -13,13 +13,11 @@ public class Solution {
         Queue<TreeNode> Q = new LinkedList<>();
         Q.add(root);
         int depth = 1;
-        boolean breakTest = false;
-        while (!Q.isEmpty() && !breakTest) {
+        while (!Q.isEmpty()) {
             int size = Q.size();
             for (int i = 0; i < size; ++i) {
                 TreeNode head = Q.poll();
                 if (head.left == null && head.right == null) {
-                    breakTest = true;
                     return depth;
                 }
                 if (head.left != null) Q.add(head.left);
