@@ -22,3 +22,5 @@ TYPE dfs(TreeNode root) {
     if (root.right != null) minDepth_dfs(root.right);
 }
 ```
+## BFS
+Terminate condition set at the tree traverse firstly reach the leaf node, then return a depth.
