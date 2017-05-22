@@ -8,8 +8,8 @@ TYPE dfs(TreeNode root) {
     if (root.left == null && root.right == null)
         /*Termination Condition*/
         return;
-    if (root.right == null) minDepth_dfs(root.left, depth + 1);
-    if (root.left == null) minDepth_dfs(root.right, depth + 1);
+    if (root.right == null) minDepth_dfs(root.left);
+    if (root.left == null) minDepth_dfs(root.right);
 }
 ```
 Or,
@@ -18,7 +18,7 @@ TYPE dfs(TreeNode root) {
     if (root.left == null && root.right == null)
         /*Termination Condition*/
         return;
-    if (root.left != null) minDepth_dfs(root.left, depth + 1);
-    if (root.right != null) minDepth_dfs(root.right, depth + 1);
+    if (root.left != null) minDepth_dfs(root.left);
+    if (root.right != null) minDepth_dfs(root.right);
 }
 ```
