@@ -17,9 +17,7 @@ public class Solution {
             int size = Q.size();
             for (int i = 0; i < size; ++i) {
                 TreeNode head = Q.poll();
-                if (head.left == null && head.right == null) {
-                    return depth;
-                }
+                if (head.left == null && head.right == null) return depth;
                 if (head.left != null) Q.add(head.left);
                 if (head.right != null) Q.add(head.right);
             }
