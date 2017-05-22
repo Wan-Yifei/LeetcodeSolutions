@@ -22,7 +22,7 @@ TYPE dfs(TreeNode root) {
     if (root.right != null) minDepth_dfs(root.right);
 }
 ```
-Better Model:
+Better Model, preorder:
 ```cpp
 TYPE dfs(TreeNode *root) {
     /*null node*/
@@ -34,7 +34,7 @@ TYPE dfs(TreeNode *root) {
     dfs(root->right);
 }
 ```
-Or,
+Or, postorder:
 ```cpp
 TYPE dfs(TreeNode *root) {
     /*null node*/
