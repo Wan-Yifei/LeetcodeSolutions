@@ -25,7 +25,9 @@ private:
                 result = true;
             return;
         }
-        if (root->left) hasPathSum_dfs(root->left, sumnow + root->val, sum);
-        if (root->right) hasPathSum_dfs(root->right, sumnow + root->val, sum);
+        if (!result) {
+            if (root->left) hasPathSum_dfs(root->left, sumnow + root->val, sum);
+            if (root->right) hasPathSum_dfs(root->right, sumnow + root->val, sum);
+        }
     }
 };
