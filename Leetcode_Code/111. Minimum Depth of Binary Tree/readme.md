@@ -22,5 +22,30 @@ TYPE dfs(TreeNode root) {
     if (root.right != null) minDepth_dfs(root.right);
 }
 ```
+Better Model:
+```cpp
+TYPE dfs(TreeNode *root) {
+    /*null node*/
+    if(root == NULL) return;
+    /*leaf node terminate condition*/
+    if(root->left == NULL && root->right == NULL) return;
+    /*half null condition*/
+    dfs(root->left);
+    dfs(root->right);
+}
+```
+Or,
+```cpp
+TYPE dfs(TreeNode *root) {
+    /*null node*/
+    if(root == NULL) return;
+    /*half null condition*/
+    if(root->left != NULL) dfs(root->left);
+    if(root->right != NULL) dfs(root->right);
+     /*leaf node terminate condition*/
+     return;
+}
+```
+
 ## BFS
 Terminate condition set at the tree traverse firstly reach the leaf node, then return a depth.
