@@ -1,32 +1,34 @@
 /**
  * Definition for a binary tree node.
- * struct TreeNode {
+ * public class TreeNode {
  *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
  */
-class Solution {
-public:
-    bool hasPathSum(TreeNode *root, int sum) {
-        if (!root) return false;
-        hasPathSum_dfs(root, sum);
+public class Solution {
+    public List<List<Integer>> pathSum(TreeNode root, int sum) {
+        if (root == null) return result;
+        Stack<Integer> stack = new Stack<>();
+        pathSum_dfs(root, stack, sum);
         return result;
     }
 
-private:
-    bool result = false;
+    private List<List<Integer>> result = new ArrayList<>();
 
-    void hasPathSum_dfs(TreeNode *root, int sum) {
-        if (!root->left && !root->right) {
-            if (sum == root->val)
-                result = true;
-            return;
+    private void pathSum_dfs(TreeNode root, Stack<Integer> stack, int sum) {
+        if (root.left == null & root.right == null) {
+            if (sum == root.val) {
+                stack.add(root.val);
+                List<Integer> object = new ArrayList<>(stack);
+                result.add(object);
+                stack.pop();
+            }
         }
-        if (!result) {
-            if (root->left) hasPathSum_dfs(root->left, sum - root->val);
-            if (root->right) hasPathSum_dfs(root->right, sum - root->val);
-        }
+        stack.add(root.val);
+        if (root.left != null) pathSum_dfs(root.left, stack, sum - root.val);
+        if (root.right != null) pathSum_dfs(root.right, stack, sum - root.val);
+        stack.pop();
     }
-};
+}
