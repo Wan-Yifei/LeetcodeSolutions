@@ -7,5 +7,5 @@ Change the tree to linked list in place. Watch that `pre = root`, the `pre` will
 Thus, we will create a `TreeNode` to re-link the dfs part at `root->right`.
 ### Method 3
 Understand the [Link](http://bangbingsyb.blogspot.com/2014/11/leetcode-flatten-binary-tree-to-linked.html) Method 2. Watch the return value aways the right end TreeNode of this root.
-### Method 4
+## No Recursion
 Understand the [Link](http://blog.csdn.net/ebowtang/article/details/51647971) Method 2. Watch this method to flatten the tree step by step; layer by layer.
