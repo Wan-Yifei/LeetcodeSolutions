@@ -34,18 +34,5 @@ TYPE dfs(TreeNode *root) {
     dfs(root->right);
 }
 ```
-Or, postorder:
-```cpp
-TYPE dfs(TreeNode *root) {
-    /*null node*/
-    if(root == NULL) return;
-    /*half null condition*/
-    if(root->left != NULL) dfs(root->left);
-    if(root->right != NULL) dfs(root->right);
-     /*leaf node terminate condition*/
-     return;
-}
-```
-
 ## BFS
 Terminate condition set at the tree traverse firstly reach the leaf node, then return a depth.
