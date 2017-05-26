@@ -24,9 +24,8 @@ class Solution(object):
             if sum == root.val:
                 self.result.append(stack + [root.val])
             return
-        stack.append(root.val)
+        sum -= root.val
         if root.left is not None:
-            self.pathSum_dfs(root.left, stack, sum - root.val)
+            self.pathSum_dfs(root.left, stack + [root.val], sum)
         if root.right is not None:
-            self.pathSum_dfs(root.right, stack, sum - root.val)
-        stack.pop()
+            self.pathSum_dfs(root.right, stack + [root.val], sum)
