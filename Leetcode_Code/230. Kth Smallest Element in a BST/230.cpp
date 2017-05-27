@@ -10,7 +10,7 @@
 class Solution {
 public:
     int kthSmallest(TreeNode *root, int k) {
-        int count = k, mini = INT_MIN;
+        int count = k, mini;
         kthSmallest_dfs(root, count, mini);
         return mini;
     }
@@ -20,7 +20,7 @@ private:
         if (!root) return;
         if (count > 0)
             kthSmallest_dfs(root->left, count, mini);
-        if (mini <= root->val && count > 0) {
+        if (count > 0) {
             count--;
             mini = root->val;
         }
