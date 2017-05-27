@@ -1,4 +1,5 @@
 # Solution
+## DP
 The value of TreeNode is the number of its complete binary tree until here (for example: flattened tree [1,2,3,4...]).
 Target the left most node for `head.left` and `head.right`. 
 If right branch's left most value is less than left most value, 
