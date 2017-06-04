@@ -3,7 +3,7 @@ public class Solution {
     // (2 * n - 2) * m + 1, (2 * n - 2) * (m + 1) - 1
     // (2 * n - 2) * m + 2, (2 * n - 2) * (m + 1) - 2
     // (2 * n - 2) * m + i, (2 * n - 2) * (m + 1) - i
-    // ...i = 2
+    // ...i = n - 1
     public String convert(String s, int numRows) {
         if (numRows == 1) return s;
         StringBuilder result = new StringBuilder();
