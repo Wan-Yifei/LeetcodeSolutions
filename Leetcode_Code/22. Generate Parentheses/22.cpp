@@ -11,7 +11,6 @@ private:
     void generateParenthesis_dfs(int n, string now, int left, int right, vector<string> &result) {
         if (left == n && right == n) {
             result.push_back(now);
-            cout << now;
             return;
         }
         if (left < n)
