@@ -4,7 +4,7 @@ public:
         vector<string> dict;
         vector<int> val;
         RomanNumVectors(dict, val);
-        if (num >= 4000000) return "error";
+        if (num >= 4000000 || num < 0) return "error";
         string result;
         for (int i = (int) (dict.size() - 1); i >= 0; --i) {
             if (num >= val[i]) {
