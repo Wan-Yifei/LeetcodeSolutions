@@ -1,10 +1,10 @@
 class Solution {
 public:
     string intToRoman(int num) {
+        if (num >= 4000000 || num < 0) return "error";
         vector<string> dict;
         vector<int> val;
         RomanNumVectors(dict, val);
-        if (num >= 4000000 || num < 0) return "error";
         string result;
         for (int i = (int) (dict.size() - 1); i >= 0; --i) {
             if (num >= val[i]) {
