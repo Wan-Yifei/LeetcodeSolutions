@@ -1,3 +1,5 @@
 # Solution
 ## Build-in Function
-## Some Method
+## Slow Method
+Check one by one.
+## KMP Algorithm
