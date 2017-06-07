@@ -20,7 +20,6 @@ public class Solution {
                         System.out.println(start);
                         if (j == 0) start++;
                         else start += (j - pi[j - 1]);
-
                         break;
                     }
                 }
@@ -34,13 +33,11 @@ public class Solution {
 
             while (needle.charAt(i) != needle.charAt(j) && j > 0) {
                 j = pi[j - 1];
-
             }
             if (needle.charAt(i) == needle.charAt(j)) {
                 pi[i] = j + 1;
                 i++;
                 j++;
-
             } else {
                 pi[i] = j;
                 i++;
