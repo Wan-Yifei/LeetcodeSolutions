@@ -30,10 +30,7 @@ public class Solution {
     private void KMP_arr(String needle, int[] pi) {
         int i = 1, j = 0;
         while (i < needle.length()) {
-
-            while (needle.charAt(i) != needle.charAt(j) && j > 0) {
-                j = pi[j - 1];
-            }
+            while (needle.charAt(i) != needle.charAt(j) && j > 0) j = pi[j - 1];
             if (needle.charAt(i) == needle.charAt(j)) {
                 pi[i] = j + 1;
                 i++;
