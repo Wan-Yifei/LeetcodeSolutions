@@ -1,8 +1,6 @@
 public class Solution {
     public String countAndSay(int n) {
         String s = "1";
-        if (n == 1)
-            s = "1";
         for (int j = 0; j < n - 1; ++j) {
             Character last = s.charAt(0), now;
             int count = 0;
