@@ -18,7 +18,7 @@ public class Solution {
     private boolean isLetter(String s) {
         if (s.length() == 1)
             return s.charAt(0) > '0';
-        else if (s.charAt(0) != '0' && (s.charAt(0) - '0') * 10 + (s.charAt(1) - '0') <= 26)
+        else if (s.charAt(0) != '0' && Integer.parseInt(s) <= 26)
             return true;
         return false;
     }
