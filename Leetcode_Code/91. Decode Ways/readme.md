@@ -1,6 +1,7 @@
 # Solution
 # DP
 Same with stair combination problem with one or two steps, this problem is also consider one and two characters but with some conditions.
+Then, think about `dp[i + 1]` represent the case of `i`.
 
 Conditions:
 * if last two digits is from 10 to 26, then we consider this can be decoded
