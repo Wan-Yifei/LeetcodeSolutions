@@ -1,15 +1,15 @@
 public class Solution {
-    public static List<String> restoreIpAddresses(String s) {
+    public List<String> restoreIpAddresses(String s) {
         if (s.length() < 4)
             return result;
         restoreIpAddresses_dfs(s, 0, 0);
         return result;
     }
 
-    private static List<String> result = new ArrayList<>();
-    private static Stack<Integer> l = new Stack<>();
+    private List<String> result = new ArrayList<>();
+    private Stack<Integer> l = new Stack<>();
 
-    private static void restoreIpAddresses_dfs(String s, int start, int num) {
+    private void restoreIpAddresses_dfs(String s, int start, int num) {
         if (start >= s.length() && l.size() == 4) {
             StringBuilder sb = new StringBuilder();
             for (int i = 0; i < l.size(); ++i) {
