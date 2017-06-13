@@ -4,7 +4,7 @@
 Check one by one.
 ## KMP Algorithm
 ```java
-private static int[] PrefixFunction(String s) {
+private int[] PrefixFunction(String s) {
     char[] S = s.toCharArray();
     int[] p = new int[S.length];
     int j = 0;
