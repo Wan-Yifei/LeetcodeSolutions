@@ -6,7 +6,8 @@ public class Solution {
         int index = 0;
         while (num != 0) {
             int threeDigits = num - num / 1000 * 1000;
-            resArr.add(0, moreArr[index]);
+            if (threeDigits != 0)
+                resArr.add(0, moreArr[index]);
             resArr.addAll(0, smallNumberToWords(threeDigits));
             num /= 1000;
             index++;
@@ -23,10 +24,9 @@ public class Solution {
     }
 
     private String[] onesArr = { "", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine" };
-    private String[] teensArr = { "Ten", "Eleven", "Twelve", "Thirteen", "Fourneen", "Fifteen", "Sixteen",
-            "Seventeen", "Eighteen", "Nineteen" };
-    private String[] tensArr = { "", "", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty",
-            "Ninety" };
+    private String[] teensArr = { "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen",
+            "Eighteen", "Nineteen" };
+    private String[] tensArr = { "", "", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety" };
     private String[] moreArr = { "", "Thousand", "Million", "Billion", "Trillion" };
 
     private List<String> smallNumberToWords(int num) {
