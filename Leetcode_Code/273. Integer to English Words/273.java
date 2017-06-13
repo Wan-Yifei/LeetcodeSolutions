@@ -5,7 +5,7 @@ public class Solution {
         List<String> resArr = new ArrayList<>();
         int index = 0;
         while (num != 0) {
-            int threeDigits = num - num / 1000 * 1000;
+            int threeDigits = num % 1000;
             if (threeDigits != 0)
                 resArr.add(0, moreArr[index]);
             resArr.addAll(0, smallNumberToWords(threeDigits));
@@ -32,7 +32,7 @@ public class Solution {
     private List<String> smallNumberToWords(int num) {
         int[] digits = new int[3];
         for (int i = 0; i < 3; ++i) {
-            digits[2 - i] = num - num / 10 * 10;
+            digits[2 - i] = num % 10;
             num /= 10;
         }
         List<String> resArr = new ArrayList<>();
