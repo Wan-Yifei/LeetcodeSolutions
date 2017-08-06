@@ -10,4 +10,4 @@ If is smaller, then increase the left.
 First check does it has the other number in the hashmap.
 If satisfied, we will return this result.
 
-Then, put this number and its index.
+Then, put this number and its index to the hash-map.
