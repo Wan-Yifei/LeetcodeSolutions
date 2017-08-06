@@ -1,4 +1,6 @@
 # Solution
+## O(n^2) solution
+...
 ## Two Pointer
 The array should be sorted.
 
