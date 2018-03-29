@@ -33,7 +33,7 @@ class Codec:
         :type data: str
         :rtype: TreeNode
         """
-        vals = list(reversed(data.split()))
+        vals = list(reversed(data.split(" ")))
 
         def dfs():
             if not vals or vals[-1] is "#":
