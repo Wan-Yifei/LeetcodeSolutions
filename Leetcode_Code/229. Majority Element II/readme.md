@@ -1,0 +1,2 @@
+# Solution
+Use hash map.
