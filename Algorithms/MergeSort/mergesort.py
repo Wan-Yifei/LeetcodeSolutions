@@ -2,7 +2,7 @@ class Solution:
     def merge_sort(self, sort_arr):
         def merge(arr1, arr2):
             stack = []
-            # two list has element
+            # two list has element, merge it to sorted subarray
             while arr1 and arr2:
                 if arr1[0] > arr2[0]:
                     stack.append(arr2[0])
@@ -17,8 +17,8 @@ class Solution:
         def mergesort(arr):
             if len(arr) == 1:
                 return arr
+            # divide into left and right array
             mid = len(arr) // 2
-            # print(arr[0: mid], arr[mid: len(arr)])
             l1 = mergesort(arr[0: mid])
             l2 = mergesort(arr[mid: len(arr)])
             return merge(l1, l2)
