@@ -1,3 +1,6 @@
+import time
+import numpy as np
+
 class Solution:
     def __init__(self, matrix1, matrix2):
         # assume matrix are square
@@ -38,11 +41,19 @@ def main():
      [0 1 1]
      [0 0 0]]
     """
-    s = Solution([[0, 0, 0], [0, 1, 0], [1, 1, 0]], [[0, 1, 1], [0, 1, 1], [0, 0, 0]])
+# Runtime test test
+    #m1, m2 = np.random.binomial(1, 0.5, size = [50, 50]), np.random.binomial(1, 0.3, size = [50, 50]) 
+    m1, m2 = np.random.binomial(1, 0.5, size = [10, 10]), np.random.binomial(1, 0.3, size = [10, 10]) 
+    #m1, m2 = np.random.binomial(1, 0.5, size = [100, 100]), np.random.binomial(1, 0.3, size = [100, 100]) 
+    #s = Solution([[0, 0, 0], [0, 1, 0], [1, 1, 0]], [[0, 1, 1], [0, 1, 1], [0, 0, 0]])
+    s = Solution(m1, m2)
     best_move = s.move_best_match()
     print(best_move)
     print(s.move_difference(best_move[0], best_move[1]))
 
-
+starttime = time.time()
 if __name__ == '__main__':
     main()
+endtime = time.time()
+
+print(endtime - starttime)
